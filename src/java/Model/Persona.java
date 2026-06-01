@@ -4,6 +4,8 @@
  */
 package Model;
 
+import java.sql.Timestamp;
+
 /**
  *
  * @author JHOSMER
@@ -14,16 +16,18 @@ public class Persona {
     private String email;
     private String telefono;
     private String direccion;
+    private Timestamp creado_en;
 
     public Persona() {
     }
 
-    public Persona(int id_persona, String nombre, String email, String telefono, String direccion) {
+    public Persona(int id_persona, String nombre, String email, String telefono, String direccion, Timestamp creado_en) {
         this.id_persona = id_persona;
         this.nombre = nombre;
         this.email = email;
         this.telefono = telefono;
         this.direccion = direccion;
+        this.creado_en = creado_en;
     }
 
     public int getId_persona() {
@@ -64,6 +68,14 @@ public class Persona {
 
     public void setDireccion(String direccion) {
         this.direccion = direccion;
+    }
+
+    public Timestamp getCreado_en() {
+        return creado_en;
+    }
+
+    public void setCreado_en(Timestamp creado_en) {
+        this.creado_en = creado_en;
     }
     
 }
