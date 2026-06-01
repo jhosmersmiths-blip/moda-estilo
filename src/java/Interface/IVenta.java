@@ -4,20 +4,18 @@
  */
 package Interface;
 
-import Model.Persona;
-import Model.Usuario;
+import Model.Venta;
 import java.util.List;
 
 /**
  *
  * @author JHOSMER
  */
-public interface IPersona {
-
-    public List<Persona> listar();
-    public int insertar(Persona p, Usuario u);
-    public boolean actualizar(Persona p);
-    public Persona buscarPorId(int id);
+public interface IVenta {
+    public List<Venta> listar();
+    public boolean insertar(Venta v);
+    public boolean actualizar(Venta v);
+    public Venta buscarPorId(int id);
     public boolean eliminar(int id);
-    public Persona buscarPorEmail(String email);
+    public List<Venta> listarPorCliente(int id_persona);
 }

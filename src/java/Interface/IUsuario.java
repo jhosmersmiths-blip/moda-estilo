@@ -4,10 +4,12 @@
  */
 package Interface;
 
+import Model.Usuario;
+
 /**
  *
  * @author JHOSMER
  */
 public interface IUsuario {
-    
+    public Usuario validate(String user, String passw);
 }
